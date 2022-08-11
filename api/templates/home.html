@@ -1,0 +1,26 @@
+<html>
+    <head>
+<style>
+    body {
+background: #777474;
+font-family: Montserrat, "sans-serif";
+display: flex;
+justify-content: center;
+color: #f5e7e7;
+}
+</style>
+        <title>Home</title>
+    </head>
+    
+    <body>
+    <div>
+        <form action="" method="POST">
+            {{form.as_p}}
+            <button type="submit"> submit </button>
+            {% csrf_token %}
+        </form>
+        
+    </div>
+
+    </body>
+</html>
