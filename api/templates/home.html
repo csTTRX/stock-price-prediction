@@ -1,21 +1,14 @@
 <html>
+    {% load static %}
     <head>
-<style>
-    body {
-background: #777474;
-font-family: Montserrat, "sans-serif";
-display: flex;
-justify-content: center;
-color: #f5e7e7;
-}
-</style>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
         <title>Home</title>
     </head>
     
     <body>
-    <div>
-        <form action="" method="POST">
-            {{form.as_p}}
+    <div class="form-box">
+        <form action="" method="POST" class="form-content">
+            {{form.date}}
             <button type="submit"> submit </button>
             {% csrf_token %}
         </form>

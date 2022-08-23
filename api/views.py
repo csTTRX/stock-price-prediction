@@ -1,13 +1,14 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 from .forms import StockForm
 import pickle
 import yfinance as yf
 
+
 def home(request):
-    filename='/home/ms/Projects/Stock_Price_Prediction/stock-price-prediction/notebook/prediction.sav'
-    model=pickle.load(open(filename,'rb'))
+ #   filename='/home/ms/Projects/Stock_Price_Prediction/stock-price-prediction/notebook/prediction.sav'
+   # model=pickle.load(open(filename,'rb'))
     form=StockForm()
-   
     if request.method=='POST':
         form=StockForm(request.POST)
         if form.is_valid():
